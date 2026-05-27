@@ -47,10 +47,3 @@ $env:PORT=3100; node server.js
 ## Privacy
 
 Everything runs locally. Documents are stored only in the local `data` folder created by the app. No external API is required.
-
-## Resume Talking Points
-
-- Built a vector-search-backed personal knowledge assistant from scratch
-- Implemented retrieval-augmented generation flow with chunking, embeddings, cosine similarity, and citations
-- Designed local-first storage for personal-data privacy
-- Created a clean chat interface and document-ingestion workflow
