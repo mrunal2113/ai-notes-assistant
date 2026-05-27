@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Personal AI Knowledge Assistant</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">AI</div>
+          <div>
+            <p class="eyebrow">Local RAG Workspace</p>
+            <h1>Knowledge Assistant</h1>
+          </div>
+        </div>
+
+        <section class="stats-grid" aria-label="Knowledge base stats">
+          <div>
+            <strong id="documentCount">0</strong>
+            <span>docs</span>
+          </div>
+          <div>
+            <strong id="chunkCount">0</strong>
+            <span>chunks</span>
+          </div>
+          <div>
+            <strong id="characterCount">0</strong>
+            <span>chars</span>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <h2>Add Knowledge</h2>
+            <span class="privacy-pill">Local only</span>
+          </div>
+
+          <label for="docTitle">Title</label>
+          <input id="docTitle" type="text" placeholder="Example: ML notes, meeting transcript" />
+
+          <label for="fileInput">Import file</label>
+          <input id="fileInput" type="file" accept=".txt,.md,.csv,.json" />
+
+          <label for="docText">Text</label>
+          <textarea id="docText" rows="10" placeholder="Paste notes, articles, research, or project documentation here..."></textarea>
+
+          <button id="saveDocButton" class="primary-button" type="button">Add to Knowledge Base</button>
+          <p id="ingestStatus" class="status-text" role="status"></p>
+        </section>
+
+        <section class="panel source-panel">
+          <div class="panel-header">
+            <h2>Sources</h2>
+            <button id="refreshButton" class="ghost-button" type="button">Refresh</button>
+          </div>
+          <div id="sourceList" class="source-list"></div>
+        </section>
+      </aside>
+
+      <section class="chat-area">
+        <header class="chat-header">
+          <div>
+            <p class="eyebrow">Ask your private notes</p>
+            <h2>Retrieval-Augmented Chat</h2>
+          </div>
+          <div class="system-chip">Vector search + citations</div>
+        </header>
+
+        <div id="messages" class="messages" aria-live="polite">
+          <article class="message assistant">
+            <div class="avatar">K</div>
+            <div class="bubble">
+              <p>
+                Add a document on the left, then ask a question here. I will retrieve the most relevant
+                chunks and cite the sources used in the answer.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <form id="chatForm" class="chat-input">
+          <input
+            id="questionInput"
+            type="text"
+            autocomplete="off"
+            placeholder="Ask something like: What are my key project requirements?"
+          />
+          <button type="submit" class="primary-button">Ask</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
+
