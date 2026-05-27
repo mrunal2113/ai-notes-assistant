@@ -4,12 +4,12 @@ A local-first RAG project that lets you add personal notes or documents, builds 
 
 ## Features
 
-- Local document ingestion from pasted text or `.txt`, `.md`, `.csv`, and `.json` files
-- Chunking and hashed vector embeddings for private semantic search
-- Persistent local JSON knowledge base
-- Retrieval-augmented chat with cited source snippets
-- Source management with document and chunk counts
-- No package install required
+1.Local document ingestion from pasted text or `.txt`, `.md`, `.csv`, and `.json` files
+2.Chunking and hashed vector embeddings for private semantic search
+3.Persistent local JSON knowledge base
+4.Retrieval-augmented chat with cited source snippets
+5.Source management with document and chunk counts
+6.No package install required
 
 ## Run
 
